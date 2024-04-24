@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: preview-ingress
+spec:
+  rules:
+    - host: preview.nginx.site
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: rollout-nginxsite-preview
+                port:
+                  number: 80
+  ingressClassName: nginx
