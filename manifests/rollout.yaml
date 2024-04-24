@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: nginxsite
-          image: chriswood123/nginxsite:a-1.25
+          image: chriswood123/nginxsite:b-1.25
           imagePullPolicy: Always
           ports:
             - containerPort: 80
